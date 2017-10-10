@@ -2716,3 +2716,437 @@ Processing by Api::V1::IdeasController#index as JSON
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:49:48 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 31ms (Views: 15.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:50:51 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:52:35 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/api/v1/ideas/5" for ::1 at 2017-10-09 19:53:01 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"asdfasdf", "body"=>"asdf"}, "id"=>"5"}
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/api/v1/ideas/4" for ::1 at 2017-10-09 19:53:03 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"Eat more food", "body"=>"Gotta eat the food to stay stronger\n"}, "id"=>"4"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:54:13 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:56:04 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:57:51 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:58:12 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:58:28 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:59:01 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 19:59:17 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:08:14 -0700
+  
+SyntaxError (/Users/bhavikpatel/Documents/Projects/ideaboard/ideaboard/app/controllers/api/v1/ideas_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/v1/ideas_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:08:25 -0700
+  
+SyntaxError (/Users/bhavikpatel/Documents/Projects/ideaboard/ideaboard/app/controllers/api/v1/ideas_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/v1/ideas_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:08:27 -0700
+  
+SyntaxError (/Users/bhavikpatel/Documents/Projects/ideaboard/ideaboard/app/controllers/api/v1/ideas_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/v1/ideas_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:08:48 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:08:50 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:53 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 6ms (ActiveRecord: 2.5ms)
+
+
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:55 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:56 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:56 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:56 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:56 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:57 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:57 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:57 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:08:59 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:09:00 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:09:00 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:09:00 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:09:00 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:09:00 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:09:01 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/5" for ::1 at 2017-10-09 20:09:01 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=5):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started POST "/api/v1/ideas" for ::1 at 2017-10-09 20:09:02 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 03:09:02.111221"], ["updated_at", "2017-10-10 03:09:02.111221"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 3.3ms)
+
+
+Started PUT "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:04 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"fuck this", "body"=>""}, "id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "fuck this"], ["updated_at", "2017-10-10 03:09:04.693738"], ["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 2.3ms)
+
+
+Started PUT "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:09 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"fuck this", "body"=>"stupid piece of shit\n"}, "id"=>"7"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "stupid piece of shit\n"], ["updated_at", "2017-10-10 03:09:09.579210"], ["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:09:14 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:15 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 3ms (ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:16 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=7):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:16 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=7):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:17 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=7):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:17 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=7):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:17 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=7):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:17 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=7):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/7" for ::1 at 2017-10-09 20:09:17 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=7):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started DELETE "/api/v1/ideas/1" for ::1 at 2017-10-09 20:09:19 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 4ms (ActiveRecord: 1.8ms)
+
+
+Started DELETE "/api/v1/ideas/1" for ::1 at 2017-10-09 20:09:19 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=1):
+  
+app/controllers/api/v1/ideas_controller.rb:21:in `destroy'

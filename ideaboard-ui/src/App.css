@@ -44,3 +44,17 @@ textarea {
   height: 90px;
   font-size: 11px;
 }
+
+.deleteIdea {
+  visibility: hidden;
+  float: right;
+  margin: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+}
+
+.tile:hover .deleteIdea {
+  visibility: visible;
+}
+
