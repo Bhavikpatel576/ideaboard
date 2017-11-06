@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 
+//! Warning, when defining a component's initial state, avoid init the state with props. This is error prone since state will only
+// be initialized with props when the component is first created
 class IdeaForm extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +33,7 @@ class IdeaForm extends Component {
     	<div className = 'tile'>
 	      <form onBlur={this.handleBlur}>
 	          <input className="input" type='text' name='title' placeholder='Enter a title'
-	          	value={this.state.title} onChange={this.handleInput} 
+	          	value={this.state.title} onChange={this.handleInput}
 	          	ref={this.props.titleRef}/>
 	          <textarea className='input' name='body' placeholder='type out your idea'
 	          	value={this.state.body} onChange={this.handleInput}> </textarea>
