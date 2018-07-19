@@ -3150,3 +3150,595 @@ Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
 ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=1):
   
 app/controllers/api/v1/ideas_controller.rb:21:in `destroy'
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:10:26 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 33ms (Views: 16.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-09 20:10:28 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 03:10:28.900190"], ["updated_at", "2017-10-10 03:10:28.900190"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+
+Started PUT "/api/v1/ideas/8" for ::1 at 2017-10-09 20:10:32 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"test ", "body"=>""}, "id"=>"8"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "test "], ["updated_at", "2017-10-10 03:10:32.688086"], ["id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/api/v1/ideas/8" for ::1 at 2017-10-09 20:10:37 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"test ", "body"=>"testerbester\n"}, "id"=>"8"}
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "testerbester\n"], ["updated_at", "2017-10-10 03:10:37.849580"], ["id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/api/v1/ideas" for ::1 at 2017-10-09 20:10:37 -0700
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 03:10:37.857470"], ["updated_at", "2017-10-10 03:10:37.857470"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:10:40 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/v1/ideas/8" for ::1 at 2017-10-09 20:10:46 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:10:48 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-09 20:11:01 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 03:11:01.574680"], ["updated_at", "2017-10-10 03:11:01.574680"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 3.4ms)
+
+
+Started PUT "/api/v1/ideas/10" for ::1 at 2017-10-09 20:11:08 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"Idea1", "body"=>""}, "id"=>"10"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "Idea1"], ["updated_at", "2017-10-10 03:11:08.426845"], ["id", 10]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/api/v1/ideas/10" for ::1 at 2017-10-09 20:11:18 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"Idea1", "body"=>"see why there isn't an autorefesh\n"}, "id"=>"10"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "see why there isn't an autorefesh\n"], ["updated_at", "2017-10-10 03:11:18.979100"], ["id", 10]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-09 20:11:18 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 03:11:18.993371"], ["updated_at", "2017-10-10 03:11:18.993371"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/api/v1/ideas/11" for ::1 at 2017-10-09 20:11:24 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"idea2", "body"=>""}, "id"=>"11"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "idea2"], ["updated_at", "2017-10-10 03:11:24.388447"], ["id", 11]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/api/v1/ideas/11" for ::1 at 2017-10-09 20:11:28 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"idea2", "body"=>"again2"}, "id"=>"11"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "again2"], ["updated_at", "2017-10-10 03:11:28.180738"], ["id", 11]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-09 20:11:28 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 03:11:28.195300"], ["updated_at", "2017-10-10 03:11:28.195300"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/api/v1/ideas/12" for ::1 at 2017-10-09 20:11:31 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"idea3", "body"=>""}, "id"=>"12"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "idea3"], ["updated_at", "2017-10-10 03:11:31.682155"], ["id", 12]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 3.1ms)
+
+
+Started PUT "/api/v1/ideas/12" for ::1 at 2017-10-09 20:11:34 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"idea3", "body"=>"see again"}, "id"=>"12"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "see again"], ["updated_at", "2017-10-10 03:11:34.114100"], ["id", 12]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:11:34 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/v1/ideas/12" for ::1 at 2017-10-09 20:11:39 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:11:40 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/v1/ideas/9" for ::1 at 2017-10-09 20:11:42 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-09 20:11:43 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 12:08:57 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (2.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 30ms (Views: 20.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-10 13:26:40 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (1.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 20:26:40.728364"], ["updated_at", "2017-10-10 20:26:40.728364"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 62ms (Views: 8.0ms | ActiveRecord: 8.4ms)
+
+
+Started PUT "/api/v1/ideas/13" for ::1 at 2017-10-10 13:26:53 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"Learn to meditate", "body"=>""}, "id"=>"13"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "Learn to meditate"], ["updated_at", "2017-10-10 20:26:53.312159"], ["id", 13]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/api/v1/ideas/13" for ::1 at 2017-10-10 13:27:11 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"Learn to meditate", "body"=>"Go to a clinic where you can meditate for couple days, maybe even 10\n"}, "id"=>"13"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "Go to a clinic where you can meditate for couple days, maybe even 10\n"], ["updated_at", "2017-10-10 20:27:11.660790"], ["id", 13]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-10 13:27:13 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 20:27:13.127438"], ["updated_at", "2017-10-10 20:27:13.127438"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 13:27:18 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 13:27:28 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/api/v1/ideas/11" for ::1 at 2017-10-10 13:27:31 -0700
+Processing by Api::V1::IdeasController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 13:27:34 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.0ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-10 13:38:04 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.9ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-10 13:38:08 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data" for ::1 at 2017-10-10 13:38:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/data"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for ::1 at 2017-10-10 13:38:15 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for ::1 at 2017-10-10 13:38:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ideas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/ideas" for ::1 at 2017-10-10 13:38:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ideas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/ideas.json" for ::1 at 2017-10-10 13:38:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ideas.json"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/idea.json" for ::1 at 2017-10-10 13:38:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/idea.json"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/Idea.json" for ::1 at 2017-10-10 13:38:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/Idea.json"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/Ideas.json" for ::1 at 2017-10-10 13:38:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/Ideas.json"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for ::1 at 2017-10-10 13:38:45 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/bhavikpatel/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 13:39:23 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 35ms (Views: 22.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 13:40:03 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (3.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 153ms (Views: 114.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-10 13:40:10 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 20:40:10.187550"], ["updated_at", "2017-10-10 20:40:10.187550"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/api/v1/ideas/15" for ::1 at 2017-10-10 13:40:11 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"asdf", "body"=>""}, "id"=>"15"}
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "asdf"], ["updated_at", "2017-10-10 20:40:11.966264"], ["id", 15]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 67ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started PUT "/api/v1/ideas/15" for ::1 at 2017-10-10 13:40:12 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"asdf", "body"=>"asdfasdf"}, "id"=>"15"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "asdfasdf"], ["updated_at", "2017-10-10 20:40:12.827484"], ["id", 15]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-10 13:40:14 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 20:40:14.498882"], ["updated_at", "2017-10-10 20:40:14.498882"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 13:40:17 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 14:05:48 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (2.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 39ms (Views: 27.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 14:06:02 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (1.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-10 15:02:09 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (4.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 22:02:09.449030"], ["updated_at", "2017-10-10 22:02:09.449030"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 253ms (Views: 190.8ms | ActiveRecord: 11.7ms)
+
+
+Started PUT "/api/v1/ideas/17" for ::1 at 2017-10-10 15:02:12 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"zsd", "body"=>""}, "id"=>"17"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "ideas" SET "title" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["title", "zsd"], ["updated_at", "2017-10-10 22:02:12.841803"], ["id", 17]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/api/v1/ideas/17" for ::1 at 2017-10-10 15:02:14 -0700
+Processing by Api::V1::IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"zsd", "body"=>"xbvdf"}, "id"=>"17"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "ideas" SET "body" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["body", "xbvdf"], ["updated_at", "2017-10-10 22:02:14.985286"], ["id", 17]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/v1/ideas" for ::1 at 2017-10-10 15:02:30 -0700
+Processing by Api::V1::IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"", "body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2017-10-10 22:02:30.778051"], ["updated_at", "2017-10-10 22:02:30.778051"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 15:02:36 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/ideas.json" for ::1 at 2017-10-10 15:02:54 -0700
+Processing by Api::V1::IdeasController#index as JSON
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
